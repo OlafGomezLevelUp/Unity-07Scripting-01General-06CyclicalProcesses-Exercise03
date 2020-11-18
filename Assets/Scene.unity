@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 279038755}
   - component: {fileID: 279038754}
   - component: {fileID: 279038753}
+  - component: {fileID: 279038756}
   m_Layer: 5
   m_Name: DamageButton
   m_TagString: Untagged
@@ -322,6 +323,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279038751}
   m_CullTransparentMesh: 0
+--- !u!114 &279038756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279038751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b249ae1334548e45a2b3deb2b74d015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageQuantity: 10
 --- !u!1 &364168290
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +384,8 @@ GameObject:
   - component: {fileID: 446756480}
   - component: {fileID: 446756479}
   - component: {fileID: 446756478}
+  - component: {fileID: 446756482}
+  - component: {fileID: 446756481}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -442,6 +458,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &446756481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446756477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e5e8e32d7d76c4ea922edd91d1ebd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeIndicator: {fileID: 1250310210}
+--- !u!114 &446756482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446756477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5791cdb218689ee4c80245c30a578416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeSystem: {fileID: 11400000, guid: 1a18f06d176b15d42b9b2e8c87dc8b72, type: 2}
 --- !u!1 &824692103
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +712,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &1250310211
 CanvasRenderer:
   m_ObjectHideFlags: 0
